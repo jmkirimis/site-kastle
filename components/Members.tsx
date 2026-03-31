@@ -12,22 +12,22 @@ export default function Members() {
     {
       name: "João",
       description: "João Marcos Alcsandro Kirimis é o responsável pela manutenção do código e criação de telas por meio da programação, além de liderar a parte de programação e auxiliar na organização do grupo.",
-      image: "/images/integrantes/joao.jpg",
+      image: "/images/members/joao.jpg",
     },
     {
       name: "Jorge",
       description: "Jorge Massaru Hashiguchi da Silva é o nosso UX/UI designer, responsável por prototipar os sites e aplicativos, além de prototipar conteúdos para o jogo por ter experiência com o idioma inglês, também faz a organização do grupo . Ele também é um dos idealizadores do artigo junto com o João e o Guilherme.",
-      image: "/images/integrantes/jorge.jpg",
+      image: "/images/members/jorge.jpg",
     },
     {
       name: "Guilherme",
       description: "Guilherme Leandro Martins é o nosso responsável pelo artigo e realização da manutenção dos artefatos para entrega durante os semestres.",
-      image: "/images/integrantes/guilherme.jpeg",
+      image: "/images/members/guilherme.jpg",
     },
     {
       name: "Gabriel",
       description: "Trabalha na integração de sistemas e infraestrutura.",
-      image: "/images/integrantes/gabriel.jpeg",
+      image: "/images/members/gabriel.jpg",
     },
   ];
 
