@@ -40,7 +40,7 @@ export default function Home() {
         <Navbar navItens={navItens} scrolled={scrolled} />
 
         {/* Título */}
-        <div className="flex flex-col w-90 z-10">
+        <div className="flex flex-col w-90 z-10 text-white">
           <h1 className="font-bold text-[7rem]">Kastle</h1>
           <span className="font-medium text-lg text-justify mt-[-1rem]">Soluções gamificadas para crianças com TEA</span>
         </div>
@@ -141,7 +141,7 @@ export default function Home() {
 
           {/* Botão de redirecionamento */}
           <button className="w-40 p-2 bg-[#EF5B6A] rounded-full">
-            <div className="flex w-full items-center justify-center h-8 border-2 py-4 border-white rounded-full text-lg font-bold">
+            <div className="flex w-full items-center justify-center h-8 border-2 py-4 text-white border-white rounded-full text-lg font-bold">
               Conhecer
             </div>
           </button>
