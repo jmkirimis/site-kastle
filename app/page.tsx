@@ -132,7 +132,7 @@ export default function Home() {
         <div className="lg:hidden w-full h-14 bg-[#9AE0FF]" />
       </div>
 
-      {/* Seção 05 - Sobre o learny e redirecionamento */}
+      {/* Seção 05 - Sobre o Learny e redirecionamento */}
       <div className="bg-[#9AE0FF] flex flex-col items-center px-6 py-12 justify-center w-full lg:min-h-screen">
         <div className="flex flex-col bg-white items-center w-full py-32 gap-18 rounded-2xl">
           {/* Logo */}
@@ -141,13 +141,13 @@ export default function Home() {
             className={"w-56 lg:w-76 bg-cover bg-center"}
           />
 
-          {/* Informações do learny */}
+          {/* Informações do Learny */}
           <div className="flex flex-col gap-12">
             <div className="flex flex-col w-full justify-center items-center gap-6">
               <h1 className="text-[26pt] font-extrabold text-[#4C4C4C]">
                 Sobre
               </h1>
-              <span className="w-2/3 text-xl text-zinc-500 text-justify">
+              <span className="w-2/3 text-lg text-zinc-500 text-justify">
                   O Learny é um aplicativo dedicado ao ensino de inglês por meio da gamificação 
                   para crianças com TEA. Reconhecemos a importância de aprender uma segunda língua 
                   para o desenvolvimento em diversos aspectos e percebemos que os aplicativos 
@@ -160,7 +160,7 @@ export default function Home() {
               <h1 className="text-[26pt] font-extrabold text-[#4C4C4C]">
                 Objetivo
               </h1>
-              <span className="w-2/3 text-xl text-zinc-500 text-justify">
+              <span className="w-2/3 text-lg text-zinc-500 text-justify">
                   Para atingir esse objetivo, desenvolvemos o aplicativo com cores em tons pastel, 
                   evitando a sobrecarga sensorial; oferecemos a opção de personalização de áudio 
                   (inclusive podendo desligá-lo) e utilizamos formas mais arredondadas, além de uma 
@@ -191,23 +191,67 @@ export default function Home() {
         
         <div className="flex flex-col gap-1.5 text-[#4C4C4C]">
           <h2 className="font-medium text-2xl mb-6">Contatos</h2>
-          <div className="grid grid-cols-2 gap-1.5">
-
+          <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-1.5">
+            {/* Tel */}
             <div className="flex gap-2">
               <strong>Tel:</strong>
               <span>55+ (13)996828069</span>
             </div>
 
-            <div className="flex items-center">
-              <img
-                src={"/icons/instagram.png"}
-                className={"w-5 h-5 mr-3"}
-              />
+            {/* Instagram - desktop */}
+            <div className="hidden lg:flex items-center">
+              <img src={"/icons/instagram.png"} className="w-5 h-5 mr-3" />
               {membersContact.map((member, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center"
-                >
+                <div key={index} className="flex items-center">
+                  <a
+                    className="text-blue-700 underline"
+                    href={member.instagram}
+                    target="_blank"
+                  >
+                    {member.name}
+                  </a>
+
+                  {index < membersContact.length - 1 && (
+                    <div className="w-0.5 h-5 bg-[#4c4c4c] mx-3" />
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Email */}
+            <div className="flex gap-2">
+              <strong>Email:</strong>
+              <span>jorge.hashiguchi2005@gmail.com</span>
+            </div>
+
+            {/* LinkedIn - desktop */}
+            <div className="hidden lg:flex items-center">
+              <img src={"/icons/linkedin.png"} className="w-5 h-5 mr-3" />
+              {membersContact.map((member, index) => (
+                <div key={index} className="flex items-center">
+                  <a
+                    className="text-blue-700 underline"
+                    href={member.linkedin}
+                    target="_blank"
+                  >
+                    {member.name}
+                  </a>
+
+                  {index < membersContact.length - 1 && (
+                    <div className="w-0.5 h-5 bg-[#4c4c4c] mx-3" />
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* MOBILE: Instagram + LinkedIn juntos */}
+            <div className="flex flex-col gap-2 mt-2 lg:hidden">
+
+              {/* Instagram */}
+              <div className="flex items-center">
+                <img src={"/icons/instagram.png"} className="w-5 h-5 mr-3" />
+                {membersContact.map((member, index) => (
+                  <div key={index} className="flex items-center">
                     <a
                       className="text-blue-700 underline"
                       href={member.instagram}
@@ -217,29 +261,17 @@ export default function Home() {
                     </a>
 
                     {index < membersContact.length - 1 && (
-                      <div
-                        className={`w-0.5 h-5 bg-[#4c4c4c] mx-3`}
-                      />
+                      <div className="w-0.5 h-5 bg-[#4c4c4c] mx-3" />
                     )}
-                </div>
-              ))}
-            </div>
+                  </div>
+                ))}
+              </div>
 
-            <div className="flex gap-2">
-              <strong>Email:</strong>
-              <span>jorge.hashiguchi2005@gmail.com</span>
-            </div>
-
-            <div className="flex items-center">
-              <img
-                src={"/icons/linkedin.png"}
-                className={"w-5 h-5 mr-3"}
-              />
-              {membersContact.map((member, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center"
-                >
+              {/* LinkedIn */}
+              <div className="flex items-center">
+                <img src={"/icons/linkedin.png"} className="w-5 h-5 mr-3" />
+                {membersContact.map((member, index) => (
+                  <div key={index} className="flex items-center">
                     <a
                       className="text-blue-700 underline"
                       href={member.linkedin}
@@ -249,14 +281,13 @@ export default function Home() {
                     </a>
 
                     {index < membersContact.length - 1 && (
-                      <div
-                        className={`w-0.5 h-5 bg-[#4c4c4c] mx-3`}
-                      />
+                      <div className="w-0.5 h-5 bg-[#4c4c4c] mx-3" />
                     )}
-                </div>
-              ))}
-            </div>
+                  </div>
+                ))}
+              </div>
 
+            </div>
           </div>
 
         </div>
