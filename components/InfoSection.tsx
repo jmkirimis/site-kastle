@@ -28,7 +28,7 @@ export default function InfoSection({
         <img
           src={image}
           alt={title}
-          className={`rounded-3xl border-6 ${borderColor} object-cover`}
+          className={`rounded-4xl border-8 ${borderColor} object-cover`}
         />
       </div>
 
@@ -39,7 +39,7 @@ export default function InfoSection({
         }`}
       >
         <h2
-          className={`text-3xl font-bold mb-3 ${titleColor}`}
+          className={`text-3xl font-extrabold mb-3 ${titleColor}`}
         >
           {title}
         </h2>

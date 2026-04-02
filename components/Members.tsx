@@ -26,7 +26,7 @@ export default function Members() {
     },
     {
       name: "Gabriel",
-      description: "Trabalha na integração de sistemas e infraestrutura.",
+      description: "Gabriel Yoshimitsu Cunha Shimabukuro ajudou na manutenção dos artefatos.",
       image: "/images/members/gabriel.jpg",
     },
   ];
@@ -92,7 +92,7 @@ export default function Members() {
           Nossa Equipe
         </h2>
 
-        <p className="text-xl text-gray-600">
+        <p className="text-xl text-gray-600 text-justify">
           {members[active].description}
         </p>
       </div>
