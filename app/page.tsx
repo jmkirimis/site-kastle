@@ -1,13 +1,32 @@
 "use client"
 
 import InfoSection from "@/components/InfoSection";
+import Values from "@/components/Values";
 import Members from "@/components/Members";
 import Navbar from "@/components/Navbar";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
-  const navItens = ["Conheça o Learny", "Manual da Marca", "Repositório no Github", "Artigo Científico"]
+  const navItens =["Home", "Sobre Nós", "Equipe", "Portfólio", "Serviços", "Contato", "Links Úteis"]
+  const navItensDropDown = [
+  {
+    title: "Conheça o Learny",
+    link: ""
+  },
+  {
+    title: "Manual da Marca",
+    link: "/manual.pdf"
+  },
+  {
+    title: "Repositório no Github",
+    link: "https://github.com/"
+  },
+  {
+    title: "Artigo Científico",
+    link: "/artigo.pdf"
+  }
+];
   const membersContact = [
     {
       name: "João Marcos",
@@ -38,7 +57,7 @@ export default function Home() {
   return (
     <div className="flex flex-col bg-white">
       {/* Seção 01 - Banner */}
-      <div className="flex flex-col items-center justify-center w-full min-h-screen">
+      <div id="home" className="flex flex-col items-center justify-center w-full min-h-screen">
         {/* Vídeo de fundo */}
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
@@ -54,7 +73,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/60"></div>
   
         {/* Navbar */}
-        <Navbar navItens={navItens} scrolled={scrolled} />
+        <Navbar
+  navItens={navItens}
+  navItensDropDown={navItensDropDown}
+  scrolled={scrolled}
+/>
 
         {/* Título */}
         <div className="flex flex-col w-90 z-10 text-white">
@@ -67,7 +90,7 @@ export default function Home() {
       </div>
 
       {/* Seção 02 - Cards dos integrantes */}
-      <div className="flex flex-col items-center justify-center py-8 w-full lg:min-h-screen">
+      <div id="equipe" className="flex flex-col items-center justify-center py-8 w-full lg:min-h-screen">
         {/* Cards */}
         <Members />
 
@@ -82,6 +105,7 @@ export default function Home() {
 
       {/* Seção 03 - Cards de informação sobre a Kastle */}
       <div className="flex flex-col items-center justify-center gap-1 p-8 md:px-20 lg:px-40 w-full min-h-screen">
+        <div id="sobreNos">
         <InfoSection
           title="Um pouco sobre nós"
           text="Somos uma equipe formada na Fatec de Registro, no curso de Desenvolvimento de Software 
@@ -92,13 +116,11 @@ export default function Home() {
           titleColor="text-red-400"
           borderColor="border-red-400"
         />
+</div>
 
         <InfoSection
-          title="Atividades acadêmicas"
-          text="Com nosso principal projeto, o Learny, participamos de diversas apresentações, 
-                com destaque para a Oracle e a FTX (Fatec Experience), onde tivemos a oportunidade 
-                de testar o aplicativo com estudantes com TEA, que aprovaram a experiência; 
-                também apresentamos no HubTec e em outros eventos para a comunidade."
+          title="Missão"
+          text="Promover um aprendizado de inglês acessível, inclusivo e engajador para crianças com Transtorno do Espectro Autista (TEA), utilizando gamificação, tecnologia e design sensorial adaptado para transformar a educação em uma experiência lúdica, acolhedora e personalizada." 
           image="/images/ftx.png"
           imagePosition="left"
           titleColor="text-blue-400"
@@ -106,25 +128,23 @@ export default function Home() {
         />
 
         <InfoSection
-          title="Conquistas"
-          text="Uma de nossas conquistas foi a escolha do nosso projeto para apresentação na 
-                Oracle Brasil, na qual alcançamos o segundo lugar entre os projetos apresentados."
+          title="Visão"
+          text="Ser referência em soluções educacionais inclusivas e gamificadas, contribuindo para que crianças neurodivergentes tenham acesso a experiências de aprendizagem mais humanas, motivadoras e adaptadas às suas necessidades, ampliando sua autonomia, desenvolvimento e inclusão social."
           image="/images/oracle.png"
           imagePosition="right"
           titleColor="text-yellow-400"
           borderColor="border-yellow-400"
         />
 
-        <InfoSection
-          title="Importância"
-          text="A Kastle é essencial para apoiar crianças neurodivergentes, especialmente no 
-                espectro do autismo, no desenvolvimento de habilidades socioemocionais e técnicas, 
-                com foco no inglês, por meio de um aprendizado acessível, envolvente e eficaz."
-          image="/images/child.png"
-          imagePosition="left"
-          titleColor="text-green-400"
-          borderColor="border-green-400"
-        />
+        {/* Faixa colorida divisória antes de Valores (similar à faixa entre Equipe e Portfólio) */}
+        <div className="flex w-full px-8 md:px-24 lg:px-38 h-6 my-6">
+          <div className="flex-1 bg-[#EF5B6A] h-6" />
+          <div className="flex-1 bg-[#6CD2FF] h-6" />
+          <div className="flex-1 bg-[#94ECA5] h-6" />
+          <div className="flex-1 bg-[#FFFC58] h-6" />
+        </div>
+
+        <Values />
       </div>
 
       {/* Seção 04 - Nuvens */}
@@ -133,7 +153,7 @@ export default function Home() {
       </div>
 
       {/* Seção 05 - Sobre o Learny e redirecionamento */}
-      <div className="bg-[#9AE0FF] flex flex-col items-center px-6 py-12 justify-center w-full lg:min-h-screen">
+      <div id="portifolio" className="bg-[#9AE0FF] flex flex-col items-center px-6 py-12 justify-center w-full lg:min-h-screen">
         <div className="flex flex-col bg-white items-center w-full py-32 gap-18 rounded-2xl">
           {/* Logo */}
           <img
