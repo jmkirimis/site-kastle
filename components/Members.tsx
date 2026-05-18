@@ -13,20 +13,36 @@ export default function Members() {
       name: "João",
       description: "João Marcos Alcsandro Kirimis é o responsável pela manutenção do código e criação de telas por meio da programação, além de liderar a parte de programação e auxiliar na organização do grupo.",
       image: "/images/members/joao.jpg",
+      linkedin: "https://www.linkedin.com/in/jo%C3%A3o-marcos-alecsandro-kirimis-443218213/",
+      linkedinLabel: "linkedin-joao-kirimis",
+      github: "https://github.com/jmkirimis",
+      githubLabel: "github-jmkirimis",
     },
     {
       name: "Jorge",
-      description: "Jorge Massaru Hashiguchi da Silva é o nosso UX/UI designer, responsável por prototipar os sites e aplicativos, além de prototipar conteúdos para o jogo por ter experiência com o idioma inglês, também faz a organização do grupo . Ele também é um dos idealizadores do artigo junto com o João e o Guilherme.",
+      description: "Jorge Massaru Hashiguchi da Silva é o nosso UX/UI designer, responsável por prototipar os sites e aplicativos, além de prototipar conteúdos para o jogo por ter experiência com o idioma inglês, também faz a organização do grupo.",
       image: "/images/members/jorge.jpg",
+      linkedin: "https://www.linkedin.com/in/jorge-hahsiguchi/",
+      linkedinLabel: "link-linkedin-jorge-massaru",
+      github: "https://github.com/JorgeMassaru",
+      githubLabel: "link-github-jorge-massaru",
     },
     {
       name: "Guilherme",
       description: "Guilherme Leandro Martins é o nosso responsável pelo artigo e realização da manutenção dos artefatos para entrega durante os semestres.",
+      linkedin: "https://www.linkedin.com/in/guilherme-leandro-martins/",
+      linkedinLabel: "link-linkedin-guilherme-leandro",
+      github: "https://github.com/guiMartins3",
+      githubLabel: "link-github-guilherme-leandro",
       image: "/images/members/guilherme.jpg",
     },
     {
       name: "Gabriel",
       description: "Gabriel Yoshimitsu Cunha Shimabukuro ajudou na manutenção dos artefatos.",
+      linkedin: "https://www.linkedin.com/in/gabriel-yoshimitsu/",
+      linkedinLabel: "link-linkedin-gabriel",
+      github: "https://github.com/G4BR13LY05H1M1T5U",
+      githubLabel: "link-github-gabriel",
       image: "/images/members/gabriel.jpg",
     },
   ];
@@ -48,7 +64,7 @@ export default function Members() {
           disableOnInteraction: false,
         }}
         onSlideChange={(swiper) => setActive(swiper.realIndex)}
-        className="w-[250px] h-[300px]"
+        className="w-62.5 h-75"
       >
         {members.map((pessoa, index) => {
           const isActive = index === active;
@@ -92,9 +108,40 @@ export default function Members() {
           Nossa Equipe
         </h2>
 
-        <p className="text-xl text-gray-600 text-justify">
+        <p className="text-xl text-gray-600 text-justify mb-4">
           {members[active].description}
         </p>
+        {/* LINKEDIN */}
+<div className="flex items-center gap-2">
+  <h3 className="text-[#4c4c4c] font-bold">
+    Linkedin:
+  </h3>
+
+  <a
+    href={members[active].linkedin}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-600 hover:underline"
+  >
+    {members[active].linkedinLabel}
+  </a>
+</div>
+
+{/* GITHUB */}
+<div className="flex items-center gap-2">
+  <h3 className="text-[#4c4c4c] font-bold">
+    Github:
+  </h3>
+
+  <a
+    href={members[active].github}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-600 hover:underline"
+  >
+    {members[active].githubLabel}
+  </a>
+</div>
       </div>
     </section>
   );
