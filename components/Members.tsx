@@ -64,7 +64,7 @@ export default function Members() {
           disableOnInteraction: false,
         }}
         onSlideChange={(swiper) => setActive(swiper.realIndex)}
-        className="w-[250px] h-[300px]"
+        className="w-62.5 h-75"
       >
         {members.map((pessoa, index) => {
           const isActive = index === active;
