@@ -29,7 +29,7 @@ export default function Navbar({
       "Home": "home",
       "Sobre Nós": "sobreNos",
       "Equipe": "equipe",
-      "Portfólio": "portfolio",
+      "Portfólio": "telas-learny",
       "Serviços": "portfolio", 
       "Contato": "contato"
     };

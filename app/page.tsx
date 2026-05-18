@@ -216,7 +216,7 @@ export default function Home() {
 
       {/* Seção 05 - Sobre o Learny e redirecionamento */}
       <div
-        id="portifolio"
+        id="portfolio"
         className="bg-[#9AE0FF] flex flex-col items-center px-6 py-12 justify-center w-full lg:min-h-screen"
       >
         <div className="flex flex-col bg-white items-center w-full py-32 gap-18 rounded-2xl">
@@ -254,7 +254,7 @@ export default function Home() {
           </div>
 
           {/* Mockup */}
-          <div className="bg-[url('/images/mockup.png')] bg-contain bg-no-repeat w-3/4 h-100"></div>
+          <div id="telas-learny" className="bg-[url('/images/mockup.png')] bg-contain bg-no-repeat w-3/4 h-100"></div>
         </div>
       </div>
 
@@ -266,7 +266,7 @@ export default function Home() {
             "linear-gradient(to right, #EF5B6A 0%, #6CD2FF 31%, #62E37B 70%, #FFFC58 100%)",
         }}
       />
-      <div className="w-full flex flex-col justify-center px-8 py-14 md:px-16 lg:px-24 lg:py-18">
+      <div id="contato" className="w-full flex flex-col justify-center px-8 py-14 md:px-16 lg:px-24 lg:py-18">
         <div className="flex flex-col gap-1.5 text-[#4C4C4C]">
           <h2 className="font-medium text-2xl mb-6">Contatos</h2>
           <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-1.5">

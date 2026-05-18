@@ -11,7 +11,7 @@ export const navItens = [
 export const navItensDropDown = [
   {
     title: "Conheça o Learny",
-    link: "",
+    link: "https://dashboard-learny.vercel.app/",
   },
   {
     title: "Manual da Marca",
@@ -19,7 +19,7 @@ export const navItensDropDown = [
   },
   {
     title: "Repositório no Github",
-    link: "https://github.com/",
+    link: "https://github.com/Learny-Projeto-Integrador/learny-mobile",
   },
   {
     title: "Artigo Científico",
