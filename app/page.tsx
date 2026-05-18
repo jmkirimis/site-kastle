@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import { FormEvent, useEffect, useState } from "react";
 import {
   bgColors,
-  membersContact,
+  members,
   navItens,
   navItensDropDown,
 } from "@/constants";
@@ -160,7 +160,7 @@ export default function Home() {
           />
         </div>
 
-        {/* Card Missão */}
+        {/* Cards de Missão, Visão e Valores */}
         <div className="flex flex-col gap-6">
           <div className="flex flex-col w-full items-center justify-center bg-[#EF5B6A] px-20 py-14 gap-4 rounded-xl">
             <h1 className="text-[2.2rem] font-extrabold">Missão</h1>
@@ -253,6 +253,7 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Mockup */}
           <div className="bg-[url('/images/mockup.png')] bg-contain bg-no-repeat w-3/4 h-100"></div>
         </div>
       </div>
@@ -278,7 +279,7 @@ export default function Home() {
             {/* Instagram - desktop */}
             <div className="hidden lg:flex items-center">
               <img src={"/icons/instagram.png"} className="w-5 h-5 mr-3" />
-              {membersContact.map((member, index) => (
+              {members.map((member, index) => (
                 <div key={index} className="flex items-center">
                   <a
                     className="text-blue-700 underline"
@@ -288,7 +289,7 @@ export default function Home() {
                     {member.name}
                   </a>
 
-                  {index < membersContact.length - 1 && (
+                  {index < members.length - 1 && (
                     <div className="w-0.5 h-5 bg-[#4c4c4c] mx-3" />
                   )}
                 </div>
@@ -304,7 +305,7 @@ export default function Home() {
             {/* LinkedIn - desktop */}
             <div className="hidden lg:flex items-center">
               <img src={"/icons/linkedin.png"} className="w-5 h-5 mr-3" />
-              {membersContact.map((member, index) => (
+              {members.map((member, index) => (
                 <div key={index} className="flex items-center">
                   <a
                     className="text-blue-700 underline"
@@ -314,7 +315,7 @@ export default function Home() {
                     {member.name}
                   </a>
 
-                  {index < membersContact.length - 1 && (
+                  {index < members.length - 1 && (
                     <div className="w-0.5 h-5 bg-[#4c4c4c] mx-3" />
                   )}
                 </div>
@@ -326,7 +327,7 @@ export default function Home() {
               {/* Instagram */}
               <div className="flex items-center">
                 <img src={"/icons/instagram.png"} className="w-5 h-5 mr-3" />
-                {membersContact.map((member, index) => (
+                {members.map((member, index) => (
                   <div key={index} className="flex items-center">
                     <a
                       className="text-blue-700 underline"
@@ -336,7 +337,7 @@ export default function Home() {
                       {member.name}
                     </a>
 
-                    {index < membersContact.length - 1 && (
+                    {index < members.length - 1 && (
                       <div className="w-0.5 h-5 bg-[#4c4c4c] mx-3" />
                     )}
                   </div>
@@ -346,7 +347,7 @@ export default function Home() {
               {/* LinkedIn */}
               <div className="flex items-center">
                 <img src={"/icons/linkedin.png"} className="w-5 h-5 mr-3" />
-                {membersContact.map((member, index) => (
+                {members.map((member, index) => (
                   <div key={index} className="flex items-center">
                     <a
                       className="text-blue-700 underline"
@@ -356,7 +357,7 @@ export default function Home() {
                       {member.name}
                     </a>
 
-                    {index < membersContact.length - 1 && (
+                    {index < members.length - 1 && (
                       <div className="w-0.5 h-5 bg-[#4c4c4c] mx-3" />
                     )}
                   </div>

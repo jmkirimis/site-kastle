@@ -63,12 +63,11 @@ export default function Navbar({
             <div key={index} className={`relative flex items-center ${scrolled ? "text-[0.7rem]" : "text-sm"}`}>
               
               {item !== "Links Úteis" ? (
-                // ADICIONADO O ONCLICK AQUI NO DESKTOP
                 <span
                   onClick={() => scrollToSection(item)}
                   className={`font-bold px-5 cursor-pointer ${
                     index === 0
-                      ? "bg-gradient-to-r from-[#973e4a] to-[#4b85a1] bg-clip-text text-transparent"
+                      ? "bg-linear-to-r from-[#973e4a] to-[#4b85a1] bg-clip-text text-transparent"
                       : "text-[#4c4c4c] hover:text-black"
                   }`}
                 >
@@ -124,11 +123,10 @@ export default function Navbar({
           {navItens.map((item, index) => (
             <div key={index}>
               {item !== "Links Úteis" ? (
-                // ADICIONADO O ONCLICK AQUI NO MOBILE (Também fecha o menu)
                 <span
                   className={`font-semibold text-lg cursor-pointer block ${
                     index === 0
-                      ? "bg-gradient-to-r from-[#973e4a] to-[#4b85a1] bg-clip-text text-transparent"
+                      ? "bg-linear-to-r from-[#973e4a] to-[#4b85a1] bg-clip-text text-transparent"
                       : "text-[#4c4c4c]"
                   }`}
                   onClick={() => {
